@@ -10,6 +10,10 @@ import tqdm
 import yaml
 from mast3r_slam.global_opt import FactorGraph
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent / "thirdparty" / "in3d"))
+
 from mast3r_slam.config import load_config, config, set_global_config
 from mast3r_slam.dataloader import Intrinsics, load_dataset
 import mast3r_slam.evaluate as eval

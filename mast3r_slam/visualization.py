@@ -95,7 +95,7 @@ class Window(WindowEvents):
         self.main2viz = main2viz
         self.viz2main = viz2main
 
-    def render(self, t: float, frametime: float):
+    def on_render(self, t: float, frametime: float):
         self.viewport.use()
         self.ctx.enable(moderngl.DEPTH_TEST)
         if self.culling:
